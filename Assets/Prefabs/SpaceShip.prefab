@@ -3150,7 +3150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   turnSpeed: 5
-  rollSpeed: 0.3
+  rollSpeed: 1
   invertY: 0
   LaserShootPositionLeft: {fileID: 7667834243542045841}
   LaserShootPositionRight: {fileID: 7667834242959956311}
