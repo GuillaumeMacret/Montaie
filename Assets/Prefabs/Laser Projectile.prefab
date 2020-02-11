@@ -4821,9 +4821,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2976468004308177094}
   - component: {fileID: 2976468004308177095}
+  - component: {fileID: 6021948796787152885}
+  - component: {fileID: 8434555343651344904}
   m_Layer: 0
   m_Name: Laser Projectile
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4856,7 +4858,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f46944316f00224d83d9a097668a74d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 100
+  Explosion: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
+--- !u!65 &6021948796787152885
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976468004308177088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7, z: 2}
+  m_Center: {x: 0, y: 0, z: -1}
+--- !u!54 &8434555343651344904
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976468004308177088}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1 &2976468005007484935
 GameObject:
   m_ObjectHideFlags: 0

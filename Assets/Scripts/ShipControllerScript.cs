@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ShipControllerScript : MonoBehaviour {
@@ -16,10 +17,17 @@ public class ShipControllerScript : MonoBehaviour {
 	public GameObject LaserShoot;
 
 	public float FireRate = 0.3f;
+
+	public AudioSource LaserAudioSourceLeft;
+	public AudioSource LaserAudioSourceRight;
+
+	private ShipSoundScript soundScript;
+
 	private float lastFire = 0f;
 
 	void Awake() {
 		body = GetComponent<Rigidbody>();
+		soundScript = GetComponent<ShipSoundScript>();
 	}
 
 	void OnEnable() {
@@ -34,15 +42,24 @@ public class ShipControllerScript : MonoBehaviour {
 			lastFire = 0f;
 			GameObject.Instantiate(LaserShoot, LaserShootPositionLeft.position, LaserShootPositionLeft.rotation);
 			GameObject.Instantiate(LaserShoot, LaserShootPositionRight.position, LaserShootPositionRight.rotation);
+			if (LaserAudioSourceLeft != null)
+				LaserAudioSourceLeft.Play();
+			if (LaserAudioSourceRight != null)
+				LaserAudioSourceRight.Play();
 		}
 	}
 
 	void FixedUpdate() {
 		Vector3 direction = GetDirection();
+		Vector3 rotation = GetRotation();
+		if (soundScript.IsEnginePlaying() && direction == Vector3.zero && rotation == Vector3.zero) {
+			soundScript.StopEngine();
+		}
+		else if (!soundScript.IsEnginePlaying() && (direction != Vector3.zero || rotation != Vector3.zero)) {
+			soundScript.StartEngine();
+		}
 		body.AddRelativeTorque(GetRotation() * turnSpeed * Time.deltaTime, ForceMode.VelocityChange);
 		body.AddRelativeForce(direction * moveSpeed * Time.deltaTime, ForceMode.VelocityChange);
-
-		Debug.Log(body.velocity);
 	}
 
 	Vector3 GetDirection() {
