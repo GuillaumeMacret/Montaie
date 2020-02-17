@@ -5026,7 +5026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
+  damageDealt: 0
   accuracy: 95
+  TimeBeforeVanish: 1.5
   muzzlePrefab: {fileID: 1340992293834908, guid: a489afa43ee836647b6b99a9c38b6f13,
     type: 3}
   hitPrefab: {fileID: 1873612019324734, guid: 3a05a240950f1e34487f4917a33bf946, type: 3}

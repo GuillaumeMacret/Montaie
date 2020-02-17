@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 59697240}
   - component: {fileID: 59697239}
   - component: {fileID: 59697238}
+  - component: {fileID: 59697242}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Enemy
@@ -150,7 +151,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &59697239
 MeshRenderer:
@@ -169,7 +170,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,6 +213,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &59697242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59697237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &232104204
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +240,7 @@ GameObject:
   - component: {fileID: 232104207}
   - component: {fileID: 232104206}
   - component: {fileID: 232104205}
+  - component: {fileID: 232104209}
   m_Layer: 0
   m_Name: Sphere (10)
   m_TagString: Enemy
@@ -242,7 +259,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &232104206
 MeshRenderer:
@@ -261,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,6 +321,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232104209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232104204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &297750228
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +348,7 @@ GameObject:
   - component: {fileID: 297750231}
   - component: {fileID: 297750230}
   - component: {fileID: 297750229}
+  - component: {fileID: 297750233}
   m_Layer: 0
   m_Name: Sphere (5)
   m_TagString: Enemy
@@ -353,7 +386,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -396,6 +429,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &297750233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297750228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1001 &365600896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449,6 +497,7 @@ GameObject:
   - component: {fileID: 543912838}
   - component: {fileID: 543912837}
   - component: {fileID: 543912836}
+  - component: {fileID: 543912840}
   m_Layer: 0
   m_Name: Sphere (12)
   m_TagString: Enemy
@@ -467,7 +516,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &543912837
 MeshRenderer:
@@ -486,7 +535,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -529,6 +578,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543912840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543912835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &560874168
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +605,7 @@ GameObject:
   - component: {fileID: 560874171}
   - component: {fileID: 560874170}
   - component: {fileID: 560874169}
+  - component: {fileID: 560874173}
   m_Layer: 0
   m_Name: Sphere (7)
   m_TagString: Enemy
@@ -578,7 +643,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -621,6 +686,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560874173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560874168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +774,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.0703125, y: 0.076171875, z: 0.02734375, w: -0.01953125}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -724,6 +804,7 @@ GameObject:
   - component: {fileID: 726837550}
   - component: {fileID: 726837549}
   - component: {fileID: 726837548}
+  - component: {fileID: 726837552}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Enemy
@@ -761,7 +842,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -804,6 +885,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726837552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726837547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &956446322
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +912,7 @@ GameObject:
   - component: {fileID: 956446325}
   - component: {fileID: 956446324}
   - component: {fileID: 956446323}
+  - component: {fileID: 956446327}
   m_Layer: 0
   m_Name: Sphere (11)
   m_TagString: Enemy
@@ -853,7 +950,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -896,6 +993,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956446327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956446322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &1072014336
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +1020,7 @@ GameObject:
   - component: {fileID: 1072014339}
   - component: {fileID: 1072014338}
   - component: {fileID: 1072014337}
+  - component: {fileID: 1072014341}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Enemy
@@ -945,7 +1058,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -988,6 +1101,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1072014341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072014336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &1105158374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1128,7 @@ GameObject:
   - component: {fileID: 1105158377}
   - component: {fileID: 1105158376}
   - component: {fileID: 1105158375}
+  - component: {fileID: 1105158379}
   m_Layer: 0
   m_Name: Sphere (8)
   m_TagString: Enemy
@@ -1037,7 +1166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1080,6 +1209,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105158379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105158374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &1355640769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1235,7 @@ GameObject:
   - component: {fileID: 1355640773}
   - component: {fileID: 1355640772}
   - component: {fileID: 1355640771}
+  - component: {fileID: 1355640774}
   - component: {fileID: 1355640770}
   m_Layer: 0
   m_Name: Sphere
@@ -1110,7 +1255,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1355640771
 MeshRenderer:
@@ -1129,7 +1274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1172,6 +1317,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355640774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355640769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &1583177776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1344,7 @@ GameObject:
   - component: {fileID: 1583177779}
   - component: {fileID: 1583177778}
   - component: {fileID: 1583177777}
+  - component: {fileID: 1583177781}
   m_Layer: 0
   m_Name: Sphere (9)
   m_TagString: Enemy
@@ -1221,7 +1382,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1264,6 +1425,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583177781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583177776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &1767698115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1452,7 @@ GameObject:
   - component: {fileID: 1767698118}
   - component: {fileID: 1767698117}
   - component: {fileID: 1767698116}
+  - component: {fileID: 1767698120}
   m_Layer: 0
   m_Name: Sphere (6)
   m_TagString: Enemy
@@ -1294,7 +1471,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1767698117
 MeshRenderer:
@@ -1313,7 +1490,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1356,6 +1533,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767698120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767698115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1 &1835232371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,6 +1652,7 @@ GameObject:
   - component: {fileID: 2033132673}
   - component: {fileID: 2033132672}
   - component: {fileID: 2033132671}
+  - component: {fileID: 2033132675}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Enemy
@@ -1497,7 +1690,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc0a529edcd4b1c4691c9bf6d2327d08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1540,6 +1733,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033132675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033132670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
+  TimeToDisappear: 1
 --- !u!1001 &7667834242256882334
 PrefabInstance:
   m_ObjectHideFlags: 0

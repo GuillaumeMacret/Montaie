@@ -5,8 +5,10 @@ using UnityEngine;
 public class ProjectileMoveScript : MonoBehaviour {
 
 	public float speed;
+	public int damageDealt;
 	[Tooltip("From 0% to 100%")]
 	public float accuracy;
+	public float TimeBeforeVanish = 1.5f;
 	public GameObject muzzlePrefab;
 	public GameObject hitPrefab;
 	public GameObject explosionPrefab;
@@ -39,6 +41,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 						offset = new Vector3 (0, offset.y, val);
 				}
 			}
+			Destroy(gameObject, TimeBeforeVanish);
 		}
 			
 		if (muzzlePrefab != null) {
@@ -63,7 +66,9 @@ public class ProjectileMoveScript : MonoBehaviour {
 		if (co.gameObject.tag != "Bullet" && !collided) {
 			collided = true;
 			if (co.gameObject.tag == "Enemy") {
-				Destroy(co.gameObject);
+				EnemyStatus enemyStatus = co.gameObject.GetComponent<EnemyStatus>();
+				if (enemyStatus != null)
+					enemyStatus.TakeDamage(damageDealt);
 			}
 
 			if (trails.Count > 0) {
@@ -84,7 +89,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 			Quaternion rot = Quaternion.FromToRotation (Vector3.up, contact.normal);
 			Vector3 pos = contact.point;
 
-			if(explosionPrefab != null && co.gameObject.tag == "Enemy") {
+			if(explosionPrefab != null && co.gameObject.tag == "Enemy" && explosionPrefab != null) {
 				GameObject explosionVFX = Instantiate(explosionPrefab, pos, rot);
 				Destroy(explosionVFX, 1.5f);
 			}

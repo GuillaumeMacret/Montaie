@@ -17,10 +17,22 @@ public class SpaceshipUI : MonoBehaviour
 	public Color RedHealthBarColor = new Color(118,17,13);
 	public Color RedHealthBarFillColor = new Color(243,106,104);
 
-	private ShipStatus status;
+	[Header("Ammo & Weapons")]
+	public Image LaserCircle;
+	public Text LaserAmmoText;
+	public Image BulletCircle;
+	public Text BulletAmmoText;
+	public Image NovaCircle;
+	public Text NovaAmmoText;
 
+	public Color SelectedWeaponColor = new Color(243, 243, 243);
+	public Color NotSelectedWeaponColor = new Color(55, 55, 63);
+
+	private ShipStatus status;
+	private ShipControllerScript controller;
 	void Start() {
 		status = GetComponent<ShipStatus>();
+		controller = GetComponent<ShipControllerScript>();
 	}
 
 	// Update is called once per frame
@@ -29,6 +41,7 @@ public class SpaceshipUI : MonoBehaviour
 	}
 
 	void OnGUI() {
+		// Health and Shield
 		if (ShieldBarFill != null) {
 			ShieldBarFill.fillAmount = (float)status.CurrentShield / status.MaxShield;
 		}
@@ -39,5 +52,26 @@ public class SpaceshipUI : MonoBehaviour
 		if (HealthBar != null) {
 			HealthBar.color = (HealthBarFill.fillAmount < 0.25f) ? (RedHealthBarColor) : (GreenHealthBarColor);
 		}
+
+		// Weapons and ammo
+		switch(controller.CurrentShootType) {
+			case ShootType.Laser:
+				LaserCircle.color = SelectedWeaponColor;
+				BulletCircle.color = NotSelectedWeaponColor;
+				NovaCircle.color = NotSelectedWeaponColor;
+				break;
+			case ShootType.Bullet:
+				LaserCircle.color = NotSelectedWeaponColor;
+				BulletCircle.color = SelectedWeaponColor;
+				NovaCircle.color = NotSelectedWeaponColor;
+				break;
+			case ShootType.Nova:
+				LaserCircle.color = NotSelectedWeaponColor;
+				BulletCircle.color = NotSelectedWeaponColor;
+				NovaCircle.color = SelectedWeaponColor;
+				break;
+		}
+		BulletAmmoText.text = status.CurrentAmmoBullets.ToString();
+		NovaAmmoText.text = status.CurrentAmmoNova.ToString();
 	}
 }

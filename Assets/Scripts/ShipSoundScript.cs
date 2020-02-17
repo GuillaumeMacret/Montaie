@@ -11,6 +11,7 @@ public class ShipSoundScript : MonoBehaviour {
 	public AudioClip ShieldBroken;
 	public AudioClip CriticalHealth;
 	public AudioClip NoAmmo;
+	public AudioClip WeaponSwitched;
 
 	[Header("Pickup Sounds")]
 	public AudioClip WeaponPickup;
@@ -48,6 +49,9 @@ public class ShipSoundScript : MonoBehaviour {
 	}
 	public void PlayNoAmmo() {
 		ShipAudio.PlayOneShot(NoAmmo);
+	}
+	public void PlayWeaponSwitched() {
+		ShipAudio.PlayOneShot(WeaponSwitched);
 	}
 
 	private void Start() {

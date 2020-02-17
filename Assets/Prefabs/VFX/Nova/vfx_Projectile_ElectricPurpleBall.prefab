@@ -14669,11 +14669,11 @@ GameObject:
   - component: {fileID: 114096453492018784}
   - component: {fileID: 199561757109601946}
   - component: {fileID: 198302984453370694}
-  - component: {fileID: 65138394354385980}
+  - component: {fileID: 1066760366607235477}
   - component: {fileID: 54780134100305680}
   m_Layer: 0
   m_Name: vfx_Projectile_ElectricPurpleBall
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14709,12 +14709,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ba759cd568c0e47a7018ab70867a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 22
-  accuracy: 95
+  speed: 25
+  damageDealt: 120
+  accuracy: 100
+  TimeBeforeVanish: 3
   muzzlePrefab: {fileID: 1237854105968354, guid: ec7165ff86195b145a4ffb514c186820,
     type: 3}
   hitPrefab: {fileID: 1351045683517926, guid: 97168fe28b3477b42895c650078ec8ef, type: 3}
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
   trails:
   - {fileID: 1590967563268456}
   - {fileID: 1183986696126840}
@@ -19502,8 +19504,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!65 &65138394354385980
-BoxCollider:
+--- !u!135 &1066760366607235477
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19513,7 +19515,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.6, z: 0.6}
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &54780134100305680
 Rigidbody:

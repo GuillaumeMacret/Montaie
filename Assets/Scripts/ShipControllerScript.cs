@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+public enum ShootType { Laser, Bullet, Nova };
+
 [RequireComponent(typeof(Rigidbody))]
 public class ShipControllerScript : MonoBehaviour {
 
@@ -14,16 +16,30 @@ public class ShipControllerScript : MonoBehaviour {
 
 	Rigidbody body;
 
-	[Header("Laser Settings")]
-	public Transform LaserShootPositionLeft;
-	public Transform LaserShootPositionRight;
+	[Header("Shoot Settings")]
+	public Transform ShootPositionLeft;
+	public Transform ShootPositionRight;
+
 	public GameObject LaserShoot;
+	public GameObject BulletShoot;
+	public GameObject NovaShoot;
 
-	public float FireRate = 0.3f;
+	public float FireRateLaser = 0.3f;
+	public float FireRateBullets = 0.05f;
+	public float FireRateNova = 2f;
 
-	[Header("Laser Audio Sources")]
-	public AudioSource LaserAudioSourceLeft;
-	public AudioSource LaserAudioSourceRight;
+	private float timeBetweenWeaponSwitch = 0.5f;
+	private float lastWeaponSwitch;
+	private float currentFireRate;
+	[System.NonSerialized]
+	public ShootType CurrentShootType;
+
+	[Header("Shoot Audio Sources & Clips")]
+	public AudioSource ShootAudioSourceLeft;
+	public AudioSource ShootAudioSourceRight;
+	public AudioClip LaserShootClip;
+	public AudioClip BulletShootClip;
+	public AudioClip NovaShootClip;
 
 	[Header("Lever Handle Settings")]
 	public Transform LeverHandle;
@@ -35,16 +51,21 @@ public class ShipControllerScript : MonoBehaviour {
 	private Quaternion handleOriginalRotation;
 
 	private ShipSoundScript soundScript;
+	private ShipStatus shipStatus;
 
 	private float lastFire = 0f;
 
 	void Awake() {
 		body = GetComponent<Rigidbody>();
 		soundScript = GetComponent<ShipSoundScript>();
+		shipStatus = GetComponent<ShipStatus>();
 	}
 
 	void Start() {
-		handleOriginalRotation = LeverHandle.localRotation;	
+		handleOriginalRotation = LeverHandle.localRotation;
+		CurrentShootType = ShootType.Laser;
+		currentFireRate = FireRateLaser;
+		lastWeaponSwitch = 0f;
 	}
 
 	void OnEnable() {
@@ -53,16 +74,68 @@ public class ShipControllerScript : MonoBehaviour {
 	}
 
 	void Update() {
+		// Change weapon
+		lastWeaponSwitch += Time.deltaTime;
+		if (Input.GetButton("Fire2") && lastWeaponSwitch > timeBetweenWeaponSwitch)
+			SwitchWeapon();
+		// Shooting process
 		lastFire += Time.deltaTime;
-		if (Input.GetButton("Fire1") && lastFire >= FireRate) {
-			lastFire = 0f;
-			GameObject.Instantiate(LaserShoot, LaserShootPositionLeft.position, LaserShootPositionLeft.rotation);
-			GameObject.Instantiate(LaserShoot, LaserShootPositionRight.position, LaserShootPositionRight.rotation);
-			if (LaserAudioSourceLeft != null)
-				LaserAudioSourceLeft.Play();
-			if (LaserAudioSourceRight != null)
-				LaserAudioSourceRight.Play();
+		if (lastFire >= currentFireRate) {
+			if (Input.GetButton("Fire1")) {
+				lastFire = 0f;
+				if(shipStatus.HasAmmo(CurrentShootType)) {
+					AudioClip currentShootClip;
+					GameObject shootToFire;
+					switch (CurrentShootType) {
+						case ShootType.Laser:
+							shootToFire = LaserShoot;
+							currentShootClip = LaserShootClip;
+							break;
+						case ShootType.Bullet:
+							shootToFire = BulletShoot;
+							currentShootClip = BulletShootClip;
+							break;
+						case ShootType.Nova:
+							shootToFire = NovaShoot;
+							currentShootClip = NovaShootClip;
+							break;
+						default:
+							shootToFire = LaserShoot;
+							currentShootClip = LaserShootClip;
+							break;
+					}
+					GameObject.Instantiate(shootToFire, ShootPositionLeft.position, ShootPositionLeft.rotation);
+					GameObject.Instantiate(shootToFire, ShootPositionRight.position, ShootPositionRight.rotation);
+					if (ShootAudioSourceLeft != null)
+						ShootAudioSourceLeft.PlayOneShot(currentShootClip, 0.3f);
+					if (ShootAudioSourceRight != null)
+						ShootAudioSourceRight.PlayOneShot(currentShootClip, 0.3f);
+					shipStatus.DescreaseAmmo(CurrentShootType);
+				}
+				else {
+					soundScript.PlayNoAmmo();
+				}
+			}
 		}
+	}
+
+	void SwitchWeapon() {
+		switch(CurrentShootType) {
+			case ShootType.Laser:
+				CurrentShootType = ShootType.Bullet;
+				currentFireRate = FireRateBullets;
+				break;
+			case ShootType.Bullet:
+				CurrentShootType = ShootType.Nova;
+				currentFireRate = FireRateNova;
+				break;
+			case ShootType.Nova:
+				CurrentShootType = ShootType.Laser;
+				currentFireRate = FireRateLaser;
+				break;
+		}
+		lastWeaponSwitch = 0f;
+		soundScript.PlayWeaponSwitched();
 	}
 
 	void FixedUpdate() {

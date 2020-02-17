@@ -21,6 +21,14 @@ public class ShipStatus : MonoBehaviour
 	[Header("Pickup Settings")]
 	public int HealthRestoredOnPickup = 25;
 
+	[Header("Ammunition Settings")]
+	public int StartingAmmoBullets = 100;
+	public int StartingAmmoNova = 2;
+	[System.NonSerialized]
+	public int CurrentAmmoBullets;
+	[System.NonSerialized]
+	public int CurrentAmmoNova;
+
 	private float lastShieldRegenTick = 0f;
 	private float lastHitReceived;
 
@@ -29,8 +37,10 @@ public class ShipStatus : MonoBehaviour
 	// Start is called before the first frame update
 	void Start() {
 		CurrentHealth = MaxHealth;
-		CurrentShield = 25;
+		CurrentShield = MaxShield;
 		lastHitReceived = 0f;
+		CurrentAmmoBullets = StartingAmmoBullets;
+		CurrentAmmoNova = StartingAmmoNova;
 		shipSound = GetComponent<ShipSoundScript>();
 	}
 
@@ -45,6 +55,30 @@ public class ShipStatus : MonoBehaviour
 			}
 		}
     }
+
+	public bool HasAmmo(ShootType st) {
+		switch(st) {
+			case ShootType.Bullet:
+				return CurrentAmmoBullets > 0;
+			case ShootType.Nova:
+				return CurrentAmmoNova > 0;
+			default:
+				return true;
+		}
+	}
+
+	public void DescreaseAmmo(ShootType st) {
+		switch (st) {
+			case ShootType.Bullet:
+				CurrentAmmoBullets--;
+				break;
+			case ShootType.Nova:
+				CurrentAmmoNova--;
+				break;
+			default:
+				break;
+		}
+	}
 
 	public void TakeDamage(int amount) {
 		lastHitReceived = 0f;
