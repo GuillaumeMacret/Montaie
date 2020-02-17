@@ -673,7 +673,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.7e-44, y: 1.1e-44, z: 6e-45, w: 1.1754945e-38}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1042,6 +1042,16 @@ PrefabInstance:
       propertyPath: minReachDistance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4668882994575905347, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668882994575905347, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.72
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b15a2d7cf6a4748b52d126006d0526, type: 3}
 --- !u!1 &831216460
@@ -1188,6 +1198,7 @@ GameObject:
   - component: {fileID: 839928790}
   - component: {fileID: 839928789}
   - component: {fileID: 839928788}
+  - component: {fileID: 839928792}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1271,6 +1282,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!81 &839928792
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839928787}
+  m_Enabled: 1
 --- !u!1001 &884204127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2777,7 +2796,7 @@ GameObject:
   - component: {fileID: 1932225024}
   m_Layer: 0
   m_Name: Octree
-  m_TagString: Untagged
+  m_TagString: IgnoreCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
