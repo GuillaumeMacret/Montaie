@@ -9,6 +9,8 @@ TagManager:
   - IgnoreCollision
   - Bullet
   - Health Pickup
+  - Nova Pickup
+  - Bullets Pickup
   layers:
   - Default
   - TransparentFX

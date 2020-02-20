@@ -20,6 +20,8 @@ public class ShipStatus : MonoBehaviour
 
 	[Header("Pickup Settings")]
 	public int HealthRestoredOnPickup = 25;
+	public int BulletsRestoredOnPickup = 100;
+	public int NovaRestoredOnPickup = 2;
 
 	[Header("Ammunition Settings")]
 	public int StartingAmmoBullets = 100;
@@ -101,6 +103,16 @@ public class ShipStatus : MonoBehaviour
 		if(other.gameObject.tag == "Health Pickup") {
 			Destroy(other.gameObject);
 			CurrentHealth = Mathf.Clamp(CurrentHealth + HealthRestoredOnPickup, 0, MaxHealth);
+			shipSound.PlayHealthPickup();
+		}
+		if (other.gameObject.tag == "Nova Pickup") {
+			Destroy(other.gameObject);
+			CurrentAmmoNova += NovaRestoredOnPickup;
+			shipSound.PlayHealthPickup();
+		}
+		if (other.gameObject.tag == "Bullets Pickup") {
+			Destroy(other.gameObject);
+			CurrentAmmoBullets += BulletsRestoredOnPickup;
 			shipSound.PlayHealthPickup();
 		}
 	}
