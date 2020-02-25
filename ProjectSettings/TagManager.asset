@@ -11,6 +11,7 @@ TagManager:
   - Health Pickup
   - Nova Pickup
   - Bullets Pickup
+  - EnemyShootArea
   layers:
   - Default
   - TransparentFX

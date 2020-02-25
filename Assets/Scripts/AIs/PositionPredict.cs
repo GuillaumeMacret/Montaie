@@ -28,7 +28,7 @@ public class PositionPredict : MonoBehaviour
         rememberPredict += predict;
         rememberPredict /= 2;
 
-        Debug.Log(rememberPredict);
+        //Debug.Log(rememberPredict);
         PredictedLocation.transform.position = rememberPredict;
     }
 }
