@@ -20,7 +20,7 @@ public class EnemyBulletTravel : MonoBehaviour
     }
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag == "PlayerProjectile" || other.gameObject.tag == "Enemy" || other.gameObject.tag == "IgnoreCollision")
+		if (other.gameObject.tag == "PlayerProjectile" || other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyShootArea" || other.gameObject.tag == "IgnoreCollision")
 			return;
 
 		isDestroyed = true;

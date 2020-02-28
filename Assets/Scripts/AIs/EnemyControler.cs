@@ -9,15 +9,26 @@ public class EnemyControler : MonoBehaviour
 
     public float fireCooldown = .5f;
 	private float lastFireCooldownCpt = 0f;
+    
 
-    void Update() {
-		if(lastFireCooldownCpt > 0)lastFireCooldownCpt -= Time.deltaTime;
-		if (Input.GetButton("Fire1") && lastFireCooldownCpt <= 0)
-		{
-			lastFireCooldownCpt = fireCooldown;
-			GameObject.Instantiate(LaserShoot, LaserShootPosition.position, LaserShootPosition.rotation);
-			if (LaserAudioSource != null)
-				LaserAudioSource.Play();
-		}
-	}
+    private void Start()
+    {
+    }
+
+    void Update()
+    {
+        if (lastFireCooldownCpt > 0) lastFireCooldownCpt -= Time.deltaTime;
+    }
+
+    public void TryFire() {
+        if (lastFireCooldownCpt <= 0)
+        {
+            lastFireCooldownCpt = fireCooldown;
+            Instantiate(LaserShoot, LaserShootPosition.position, LaserShootPosition.rotation);
+            if (LaserAudioSource != null)
+                LaserAudioSource.Play();
+        }
+    }
+
+
 }
