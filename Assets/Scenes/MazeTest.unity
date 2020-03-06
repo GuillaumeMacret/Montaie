@@ -976,16 +976,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1779358216}
     m_Modifications:
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_Name
-      value: Robot (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: playerHead
+      value: 
+      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419506, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1041,26 +1056,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.5
+      propertyPath: m_Name
+      value: Robot (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: playerHead
-      value: 
-      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: playerObject
@@ -1075,7 +1080,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1628505887}
+      objectReference: {fileID: 1491597763}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: pathPointRadius
@@ -1095,11 +1100,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b15a2d7cf6a4748b52d126006d0526, type: 3}
@@ -1242,16 +1242,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1779358216}
     m_Modifications:
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_Name
-      value: Robot (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: playerHead
+      value: 
+      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419506, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1307,31 +1327,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.5
+      propertyPath: m_Name
+      value: Robot (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: playerHead
-      value: 
-      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: playerObject
@@ -1346,7 +1351,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1628505887}
+      objectReference: {fileID: 1491597763}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: pathPointRadius
@@ -1356,11 +1361,6 @@ PrefabInstance:
         type: 3}
       propertyPath: minReachDistance
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b15a2d7cf6a4748b52d126006d0526, type: 3}
@@ -2046,16 +2046,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1779358216}
     m_Modifications:
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_Name
-      value: Robot (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: playerHead
+      value: 
+      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419506, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2111,31 +2131,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      propertyPath: m_Name
+      value: Robot (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: playerHead
-      value: 
-      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: playerObject
@@ -2150,7 +2155,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1628505887}
+      objectReference: {fileID: 1491597763}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: pathPointRadius
@@ -2161,16 +2166,11 @@ PrefabInstance:
       propertyPath: minReachDistance
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b15a2d7cf6a4748b52d126006d0526, type: 3}
---- !u!4 &1628505887 stripped
+--- !u!4 &1491597763 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7672419535035937481, guid: ab3830a4b39099b4880d1defbad9f446,
+  m_CorrespondingSourceObject: {fileID: 1491597763, guid: ab3830a4b39099b4880d1defbad9f446,
     type: 3}
   m_PrefabInstance: {fileID: 1948364112}
   m_PrefabAsset: {fileID: 0}
@@ -2743,12 +2743,12 @@ PrefabInstance:
     - target: {fileID: 7672419535035937481, guid: ab3830a4b39099b4880d1defbad9f446,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.8
+      value: 9.81
       objectReference: {fileID: 0}
     - target: {fileID: 7672419535035937481, guid: ab3830a4b39099b4880d1defbad9f446,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.56
       objectReference: {fileID: 0}
     - target: {fileID: 7672419535035937481, guid: ab3830a4b39099b4880d1defbad9f446,
         type: 3}
@@ -2789,11 +2789,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7667834242942199789, guid: ab3830a4b39099b4880d1defbad9f446,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 3863
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3830a4b39099b4880d1defbad9f446, type: 3}
@@ -2838,11 +2833,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1779358216}
     m_Modifications:
-    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_Name
-      value: Robot
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
+        type: 3}
+      propertyPath: playerHead
+      value: 
+      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419506, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2898,31 +2913,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
+    - target: {fileID: 3377840191600419516, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      propertyPath: m_Name
+      value: Robot
       objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404837, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191600419505, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: playerHead
-      value: 
-      objectReference: {fileID: 2092161278}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1628505887}
+      objectReference: {fileID: 1491597763}
     - target: {fileID: 3377840191600419517, guid: 32b15a2d7cf6a4748b52d126006d0526,
         type: 3}
       propertyPath: octree
@@ -2952,11 +2952,6 @@ PrefabInstance:
         type: 3}
       propertyPath: minReachDistance
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377840191103404832, guid: 32b15a2d7cf6a4748b52d126006d0526,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b15a2d7cf6a4748b52d126006d0526, type: 3}
