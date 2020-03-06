@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.21960784, g: 0.6431373, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.21960783, b: 0.2380047, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5094,7 +5094,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.84705883, g: 0.9490196, b: 1, a: 1}
+      maxColor: {r: 0.9622642, g: 0.26779994, b: 0.27453017, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9690,10 +9690,10 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 0.4627451, g: 0.95686275, b: 1, a: 1}
-      key2: {r: 0.21960784, g: 0.6117647, b: 1, a: 1}
-      key3: {r: 0, g: 0.3372549, b: 1, a: 1}
-      key4: {r: 0, g: 0.09019608, b: 1, a: 0}
+      key1: {r: 1, g: 0.47015104, b: 0.46274507, a: 1}
+      key2: {r: 1, g: 0.21960783, b: 0.23647678, a: 1}
+      key3: {r: 1, g: 0.010785073, b: 0, a: 1}
+      key4: {r: 1, g: 0, b: 0.018496037, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
@@ -9701,7 +9701,7 @@ TrailRenderer:
       ctime1: 16384
       ctime2: 32768
       ctime3: 49151
-      ctime4: 65535
+      ctime4: 65342
       ctime5: 0
       ctime6: 0
       ctime7: 0
