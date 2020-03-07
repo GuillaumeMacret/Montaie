@@ -12,8 +12,9 @@ public class EnemyStatus : MonoBehaviour
 	[Header("When dying")]
 	public GameObject Explosion;
 	public float TimeToDisappear = 1f;
-	private Material material;
 
+	private Material material;
+	private List<Renderer> renderers;
 	private float timeSinceDead = 0f;
 	private bool isDead = false;
 
@@ -37,14 +38,22 @@ public class EnemyStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
 		CurrentHealth = MaxHealth;
-		material = GetComponent<Renderer>().material;
+		renderers = new List<Renderer>();
+		GetComponentsInChildren(renderers);
+		//material = GetComponent<Renderer>().material;
 	}
 
     // Update is called once per frame
     void Update() {
         if(isDead) {
 			timeSinceDead += Time.deltaTime;
-			material.SetFloat("_DissolveAmount", timeSinceDead / TimeToDisappear);
+			//material.SetFloat("_DissolveAmount", timeSinceDead / TimeToDisappear);
+			if (renderers != null) {
+				foreach (Renderer renderer in renderers) {
+					foreach (Material mat in renderer.materials)
+						mat.SetFloat("_DissolveAmount", timeSinceDead / TimeToDisappear);
+				}
+			}
 		}
     }
 }

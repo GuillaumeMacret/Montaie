@@ -70,7 +70,11 @@ public class ProjectileMoveScript : MonoBehaviour {
 				if (enemyStatus != null)
 					enemyStatus.TakeDamage(damageDealt);
 			}
-
+			if (co.gameObject.tag == "Player") {
+				ShipStatus shipStatus = co.gameObject.GetComponent<ShipStatus>();
+				if (shipStatus != null)
+					shipStatus.TakeDamage(damageDealt);
+			}
 			if (trails.Count > 0) {
 				for (int i = 0; i < trails.Count; i++) {
 					trails [i].transform.parent = null;
@@ -89,7 +93,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 			Quaternion rot = Quaternion.FromToRotation (Vector3.up, contact.normal);
 			Vector3 pos = contact.point;
 
-			if(explosionPrefab != null && co.gameObject.tag == "Enemy" && explosionPrefab != null) {
+			if(explosionPrefab != null && (co.gameObject.tag == "Enemy" || co.gameObject.tag == "Player") && explosionPrefab != null) {
 				GameObject explosionVFX = Instantiate(explosionPrefab, pos, rot);
 				Destroy(explosionVFX, 1.5f);
 			}
