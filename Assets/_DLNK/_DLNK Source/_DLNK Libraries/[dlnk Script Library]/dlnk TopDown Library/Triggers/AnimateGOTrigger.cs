@@ -20,6 +20,7 @@ public class AnimateGOTrigger : MonoBehaviour
     private bool _iscolliding = false;
     [HideInInspector]
     public Animator animator;
+	private List<OcclusionPortal> occlusionPortals;
 
     // Use this for initialization
     void Start()
@@ -28,8 +29,12 @@ public class AnimateGOTrigger : MonoBehaviour
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
         // set animator
         animator = GoTarget.GetComponent<Animator>();
-        // set default anim values
-        //animator.SetBool("Opened", true);
+		// set default anim values
+		//animator.SetBool("Opened", true);
+		occlusionPortals = new List<OcclusionPortal>();
+		GetComponentsInChildren(occlusionPortals);
+		foreach(OcclusionPortal occlusionPortal in occlusionPortals)
+			occlusionPortal.open = false;
     }
 
     // When any collider hits the trigger.
@@ -37,33 +42,43 @@ public class AnimateGOTrigger : MonoBehaviour
     {
         // get player collider
         _activator = ManagerScript.PlayerCollider;
-        Debug.Log(trig.name + "has entered the activator trigger");
         // check if Key pressed and collider hit was from correct target
         if (trig.GetComponent<Collider>() == _activator)
         {
             // set the door ready to move
             _iscolliding = true;
-        }
-        // AUTOANIM
-        if (AutoAnim && (!Locked))
-        {
-            animator.SetBool("Opened", false);
-            animator.SetTrigger("Actived");
-        }
+			Debug.Log(trig.name + "has entered the activator trigger");
+			// AUTOANIM
+			if (AutoAnim && (!Locked))
+			{
+				animator.SetBool("Opened", false);
+				animator.SetTrigger("Actived");
+			}
+			foreach (OcclusionPortal occlusionPortal in occlusionPortals) {
+				occlusionPortal.open = true;
+				Debug.Log(occlusionPortal.name);
+			}
+		}
     }
     void OnTriggerExit(Collider trig)
     {
-        // set the door out of reach
-        _iscolliding = false;
-        //debug
-        Debug.Log(trig.name + "has exit the activator trigger");
+		_activator = ManagerScript.PlayerCollider;
 
-        //AUTOANIM
-        if (AutoAnim && (!Locked))
-        {
-            animator.SetTrigger("Actived");
-            animator.SetBool("Opened", true);
-        }
+		if(trig.GetComponent<Collider>() == _activator) {
+			// set the door out of reach
+			_iscolliding = false;
+			//debug
+			Debug.Log(trig.name + "has exit the activator trigger");
+
+			//AUTOANIM
+			if (AutoAnim && (!Locked))
+			{
+				animator.SetTrigger("Actived");
+				animator.SetBool("Opened", true);
+			}
+			foreach (OcclusionPortal occlusionPortal in occlusionPortals)
+				occlusionPortal.open = false;
+		}
     }
 
     // Update is called once per frame
@@ -75,17 +90,17 @@ public class AnimateGOTrigger : MonoBehaviour
             // get unlock key code
             UnlockKey = ManagerScript.DoorKeyCode;
             // Set movement on when Key pressed
-            if ((Input.GetKeyUp(UnlockKey)) && (!Locked) && (!AutoAnim))
+            if ((Input.GetKeyDown(ManagerScript.DoorKeyCode) && (!Locked) && (!AutoAnim)))
             {
                 animator.SetTrigger("Actived");
                 if (animator.GetBool("Opened") == false)
                 {
                     animator.SetBool("Opened", true);
-                }
+				}
                 else
                 {
                     animator.SetBool("Opened", false);
-                }
+				}
             }
         }
     }

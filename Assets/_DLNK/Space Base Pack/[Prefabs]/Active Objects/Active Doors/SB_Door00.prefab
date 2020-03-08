@@ -592,7 +592,10 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071066, z: -0, w: 0.70710707}
   m_LocalPosition: {x: 0, y: 3.5, z: 0}
   m_LocalScale: {x: 15, y: 7.5, z: 9.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 6216500138891475400}
+  - {fileID: 5383245191500479679}
+  - {fileID: 476880290611399641}
   m_Father: {fileID: 4431191611153192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -965,6 +968,129 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300018, guid: 1a865423c0064424cb5c6476f8c7d5b5, type: 3}
+--- !u!1 &4015889713867149030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 476880290611399641}
+  - component: {fileID: 8062250258863352705}
+  m_Layer: 0
+  m_Name: OcclusionPortal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &476880290611399641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015889713867149030}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.06666667, z: 0}
+  m_LocalScale: {x: 1, y: 1.0666667, z: 0.9473688}
+  m_Children: []
+  m_Father: {fileID: 4353054966945928}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!41 &8062250258863352705
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015889713867149030}
+  m_Open: 1
+  m_Center: {x: 0, y: -0.35, z: 0}
+  m_Size: {x: 0.1, y: 0.4, z: 1}
+--- !u!1 &5720805692133857002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5383245191500479679}
+  - component: {fileID: 1021346608847652605}
+  m_Layer: 0
+  m_Name: OcclusionPortal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5383245191500479679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720805692133857002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.06666667, z: 0}
+  m_LocalScale: {x: 1, y: 1.0666667, z: 0.9473688}
+  m_Children: []
+  m_Father: {fileID: 4353054966945928}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!41 &1021346608847652605
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720805692133857002}
+  m_Open: 0
+  m_Center: {x: 0, y: -0.05, z: 0.3}
+  m_Size: {x: 0.1, y: 0.9, z: 0.4}
+--- !u!1 &5779777168270836385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6216500138891475400}
+  - component: {fileID: 7180337265587216172}
+  m_Layer: 0
+  m_Name: OcclusionPortal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6216500138891475400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779777168270836385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.06666667, z: 0}
+  m_LocalScale: {x: 1, y: 1.0666667, z: 0.9473688}
+  m_Children: []
+  m_Father: {fileID: 4353054966945928}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!41 &7180337265587216172
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779777168270836385}
+  m_Open: 0
+  m_Center: {x: 0, y: -0.05, z: -0.3}
+  m_Size: {x: 0.1, y: 0.9, z: 0.4}
 --- !u!1 &6413932062647962235
 GameObject:
   m_ObjectHideFlags: 0
