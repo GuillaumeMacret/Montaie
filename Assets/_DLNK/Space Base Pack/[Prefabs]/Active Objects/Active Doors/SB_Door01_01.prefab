@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 65955048591186928}
   - component: {fileID: 23630783499188032}
   - component: {fileID: 114357989429234334}
+  - component: {fileID: 8139965655547536487}
   m_Layer: 0
   m_Name: DoorTrigger
   m_TagString: Untagged
@@ -486,6 +487,16 @@ MonoBehaviour:
   AutoAnim: 1
   UnlockKey: 0
   animator: {fileID: 0}
+--- !u!41 &8139965655547536487
+OcclusionPortal:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222793354217958}
+  m_Open: 1
+  m_Center: {x: -0.015, y: 0, z: 0}
+  m_Size: {x: 0.05, y: 1, z: 1}
 --- !u!1 &1267424996318328
 GameObject:
   m_ObjectHideFlags: 0
