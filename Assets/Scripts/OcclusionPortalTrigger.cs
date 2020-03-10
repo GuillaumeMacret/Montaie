@@ -4,35 +4,33 @@ using UnityEngine;
 
 public class OcclusionPortalTrigger : MonoBehaviour
 {
-	private MeshRenderer meshRenderer;
-	private OcclusionPortal occlusionPortal;
+	private List<MeshRenderer> meshRenderers;
+	private List<OcclusionPortal> occlusionPortals;
     
 	// Start is called before the first frame update
     void Start()
     {
-		meshRenderer = GetComponent<MeshRenderer>();
-		meshRenderer.enabled = false;
-		occlusionPortal = GetComponent<OcclusionPortal>();
-		occlusionPortal.open = true;
+		meshRenderers = new List<MeshRenderer>();
+		GetComponentsInChildren(meshRenderers);
+		foreach(MeshRenderer meshRenderer in meshRenderers)
+			meshRenderer.enabled = false;
+		occlusionPortals = new List<OcclusionPortal>();
+		GetComponentsInChildren(occlusionPortals);
+		foreach(OcclusionPortal occlusionPortal in occlusionPortals)
+			occlusionPortal.open = true;
     }
 
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "Player") {
-			Debug.Log("Closed");
-			occlusionPortal.open = false;
+			foreach (OcclusionPortal occlusionPortal in occlusionPortals)
+				occlusionPortal.open = false;
 		}
 	}
 
 	private void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag == "Player") {
-			Debug.Log("Opened");
-			occlusionPortal.open = true;
+			foreach (OcclusionPortal occlusionPortal in occlusionPortals)
+				occlusionPortal.open = true;
 		}
 	}
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 }
