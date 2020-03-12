@@ -55,7 +55,7 @@ public class SceneControl : MonoBehaviour {
 
         // Set cursor
         Cursor.SetCursor(myCursor, hotSopot, CursorMode.Auto);
-        Cursor.visible = false;
+        //Cursor.visible = false;
         SunIntensity.value = SunLight.intensity;
 
         // Set volume level
