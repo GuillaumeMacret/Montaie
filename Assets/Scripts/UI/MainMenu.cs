@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject gameEntities;
+    public GameObject menuContainer;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,10 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        Debug.Log("Loading level 1");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        Debug.Log("Activating entities");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        gameEntities.SetActive(true);
+        menuContainer.SetActive(false);
     }
 
     public void ExitGame()
