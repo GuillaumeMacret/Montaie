@@ -4,24 +4,17 @@ using UnityEngine;
 
 public class ExitArea : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public GameObject restartMenu;
+    public GameObject gameEntities;
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
             Debug.Log("Player won ! TODO");
+            restartMenu.SetActive(true);
+            gameEntities.SetActive(false);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

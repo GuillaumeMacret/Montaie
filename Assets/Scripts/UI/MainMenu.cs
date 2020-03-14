@@ -26,6 +26,12 @@ public class MainMenu : MonoBehaviour
         menuContainer.SetActive(false);
     }
 
+    public void ReloadScene()
+    {
+        Debug.Log("Reloading scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void ExitGame()
     {
         Debug.Log("Exiting");
