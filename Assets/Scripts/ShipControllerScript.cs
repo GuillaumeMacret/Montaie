@@ -104,8 +104,14 @@ public class ShipControllerScript : MonoBehaviour {
 							currentShootClip = LaserShootClip;
 							break;
 					}
-					GameObject.Instantiate(shootToFire, ShootPositionLeft.position, ShootPositionLeft.rotation);
-					GameObject.Instantiate(shootToFire, ShootPositionRight.position, ShootPositionRight.rotation);
+                    shootToFire.transform.localScale = transform.localScale;
+
+                    GameObject shootLeft = GameObject.Instantiate(shootToFire, ShootPositionLeft.position, ShootPositionLeft.rotation);
+                    shootLeft.transform.localScale = transform.localScale;
+
+					GameObject shootRight = GameObject.Instantiate(shootToFire, ShootPositionRight.position, ShootPositionRight.rotation);
+                    shootRight.transform.localScale = transform.localScale;
+
 					if (ShootAudioSourceLeft != null)
 						ShootAudioSourceLeft.PlayOneShot(currentShootClip, 0.3f);
 					if (ShootAudioSourceRight != null)
