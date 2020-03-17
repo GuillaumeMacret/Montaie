@@ -113,7 +113,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 	}
 
 	public IEnumerator DestroyParticle (float waitTime) {
-
+		/*
 		if (transform.childCount > 0 && waitTime != 0) {
 			List<Transform> tList = new List<Transform> ();
 
@@ -128,7 +128,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 					tList[i].localScale -= new Vector3 (0.1f, 0.1f, 0.1f);
 				}
 			}
-		}
+		}*/
 		
 		yield return new WaitForSeconds (waitTime);
 		Destroy (gameObject);

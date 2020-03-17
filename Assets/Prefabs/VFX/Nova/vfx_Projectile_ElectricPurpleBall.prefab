@@ -14709,7 +14709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ba759cd568c0e47a7018ab70867a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 15
   damageDealt: 120
   accuracy: 100
   TimeBeforeVanish: 3
@@ -19515,7 +19515,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 1.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &54780134100305680
 Rigidbody:

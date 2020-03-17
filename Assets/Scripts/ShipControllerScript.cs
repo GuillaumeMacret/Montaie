@@ -107,10 +107,10 @@ public class ShipControllerScript : MonoBehaviour {
                     shootToFire.transform.localScale = transform.localScale;
 
                     GameObject shootLeft = GameObject.Instantiate(shootToFire, ShootPositionLeft.position, ShootPositionLeft.rotation);
-                    shootLeft.transform.localScale = transform.localScale;
+                    //shootLeft.transform.localScale = transform.localScale;
 
 					GameObject shootRight = GameObject.Instantiate(shootToFire, ShootPositionRight.position, ShootPositionRight.rotation);
-                    shootRight.transform.localScale = transform.localScale;
+                    //shootRight.transform.localScale = transform.localScale;
 
 					if (ShootAudioSourceLeft != null)
 						ShootAudioSourceLeft.PlayOneShot(currentShootClip, 0.3f);

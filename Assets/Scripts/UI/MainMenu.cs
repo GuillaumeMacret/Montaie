@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject gameEntities;
     public GameObject menuContainer;
+	public GameObject menuCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         gameEntities.SetActive(true);
         menuContainer.SetActive(false);
+		menuCamera.SetActive(false);
     }
 
     public void ReloadScene()
