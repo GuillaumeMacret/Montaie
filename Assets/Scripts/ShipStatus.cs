@@ -13,6 +13,8 @@ public class ShipStatus : MonoBehaviour
 	[System.NonSerialized]
 	public int CurrentHealth;
 
+    public GameObject GameOverMenu;
+
 	[Header("Shield Settings")]
 	public int ShieldRegenPerTick = 3;
 	public float SecondsBeforeShieldRegen = 3f;
@@ -56,6 +58,11 @@ public class ShipStatus : MonoBehaviour
 				lastShieldRegenTick = 0f;
 			}
 		}
+
+        if(CurrentHealth <= 0)
+        {
+            GameOverMenu.SetActive(true);
+        }
     }
 
 	public bool HasAmmo(ShootType st) {
