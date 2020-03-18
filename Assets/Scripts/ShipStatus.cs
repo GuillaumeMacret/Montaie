@@ -14,6 +14,7 @@ public class ShipStatus : MonoBehaviour
 	public int CurrentHealth;
 
     public GameObject GameOverMenu;
+    public GameObject MenuCamera;
 
 	[Header("Shield Settings")]
 	public int ShieldRegenPerTick = 3;
@@ -62,6 +63,7 @@ public class ShipStatus : MonoBehaviour
         if(CurrentHealth <= 0)
         {
             GameOverMenu.SetActive(true);
+            MenuCamera.SetActive(true);
         }
     }
 

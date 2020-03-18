@@ -6,6 +6,7 @@ public class ExitArea : MonoBehaviour
 {
     public GameObject restartMenu;
     public GameObject gameEntities;
+    public GameObject MenuCamera;
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -15,6 +16,7 @@ public class ExitArea : MonoBehaviour
             gameEntities.SetActive(false);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            MenuCamera.SetActive(true);
         }
     }
 }
