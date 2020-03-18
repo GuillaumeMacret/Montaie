@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbeb09ccd34f2840a6c6dd4da4126cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 75
   Explosion: {fileID: 159918, guid: 3b172110df684f54bbe647cbb9840cdf, type: 3}
   TimeToDisappear: 1
 --- !u!54 &2590715724562181979
